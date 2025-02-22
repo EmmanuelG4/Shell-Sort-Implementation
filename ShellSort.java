@@ -85,11 +85,13 @@ public class ShellSort {
     	}
     	
     	// Reversing the hlist
-    	int len = hlist.length;
-    	for(int i = 0; i < (len/2); i++) {
-    		int temp = hlist[i];
-    		hlist[i] = hlist[len - 1 - i];
-    		hlist[len - 1 - i] = temp;
+    	if(code == 3) {
+	    	int len = hlist.length;
+	    	for(int i = 0; i < (len/2); i++) {
+	    		int temp = hlist[i];
+	    		hlist[i] = hlist[len - 1 - i];
+	    		hlist[len - 1 - i] = temp;
+	    	}
     	}
     	
 		// Performing insertion sort 
@@ -105,13 +107,7 @@ public class ShellSort {
 	        }
 	    }
 		
-		// Printing out the hlist
-		System.out.println("Hlist: ");
-		for(int i = 0; i < hlist.length; i++) {
-			System.out.print(hlist[i] + " ");
-		}
-		System.out.println();
-		
         return hlist;
     }
 }
+
